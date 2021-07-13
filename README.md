@@ -17,3 +17,11 @@
 ## Execute Microservice
 `npm start`
 `npm test`
+
+## Sample URLS
+http://localhost:3000/about
+http://localhost:3000/distance/63109/63139
+
+## Testing
+One test created for /distance endpoint.
+Start server with `npm start` and then execute `npm test` to run the test.
