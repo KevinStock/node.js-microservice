@@ -18,3 +18,20 @@ describe('/GET distance', function() {
         });
     });
 });
+
+describe('/GET about', function() {
+    var url = "http://localhost:3000/about";
+    it('returns status 200', function(done) {
+        request(url, function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+            done();
+        });
+    });
+    it('returns the proper data', function(done) {
+        request(url, function(error, response, body) {
+            expect(JSON.parse(body).name).to.equal('nodemain');
+            expect(JSON.parse(body).version).to.equal('1.0.0');
+            done();
+        });
+    });
+});
